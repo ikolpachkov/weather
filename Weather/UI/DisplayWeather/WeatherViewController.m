@@ -27,6 +27,7 @@
     _weatherView = [[UINib nibWithNibName:@"WeatherView" bundle:nil] instantiateWithOwner:self options:nil][0];
     self.view = _weatherView;
     
+    [self updateCurrentLocation];
     [_weatherView.searchButton addTarget:self action:@selector(onTapSearch) forControlEvents:UIControlEventTouchUpInside];
 }
 
